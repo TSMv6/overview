@@ -570,6 +570,26 @@ var config = {
             onChapterExit: [{layer: 'hts', opacity: 0 , color : false}] 
         }, 
         {
+            id: 'chapter5-s1',
+            alignment: 'left',
+            hidden: false,
+            title: 'Network & Population Engines',
+            image: './images/chapter_5/network.png',
+            description: '<b>netPrep</b> - GeoMaster GeoPackage to consolidated Link/Node networks and GMNS in one pass: link consolidation with Many-to-One traceability, multiple count fields, and the DTA controls (meso/micro tiers, per-gantry toll policies, reversible lanes, truck restrictions) carried natively.<br><br><b>PathSkim</b> - C++ free-flow path skims written straight to OMX for the demand models.<br><br><b>PopSyn</b> - population synthesis (households + group quarters) with land-use prepared by <b>se_aggregate</b>, which rolls the 26k-zone regional land use up to model zones exactly.',
+            location: {
+                center: [-84.98998, 28.40739],
+                zoom: 6.88,
+                pitch: 46.50,
+                bearing: 0.00,
+                speed: .5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
             id: 'chapter3-s7',
             alignment: 'left',
             hidden: false,
@@ -706,46 +726,24 @@ var config = {
             onChapterExit: [{layer: 'nextgen-DU', opacity: 0 , color : false}] 
         },
         {
-            id: 'chapter3-s12',
-            alignment: 'center',
+            id: 'chapter5-s2',
+            alignment: 'right',
             hidden: false,
-            title: 'Running SDT Visitor Model',
-            image: './images/chapter_3/callSDT_vis.png',
-            description: 'The short-distance visitor tour-based model estimates tours from visitors staying at hotels and some resident households.  The sdt tours were validated against statewide O-D tour data.' ,
+            title: 'Demand Engines',
+            image: './images/chapter_5/demand.png',
+            description: '<b>SDTModel</b> (sdt-run) - the resident and visitor short-distance tour models, refactored from Java to C++: statewide daily activity patterns, location choice on skim tiles, distributed VOT - in minutes.<br><br><b>LDTModel</b> (ldt-run) - long-distance resident / visitor / cross-border tours (joint destination-mode choice), refactored from Pascal to C++, with DMA-level calibration and market-specific external targets.<br><br><b>agentPlans</b> - assembles every market into one HyDRA-ready trip list: external-station scaling by market, departure-time clock, and the express-lane toll-choice inputs.',
             location: {
-                center: [-83.02417, 27.89955],
-                zoom: 8.15,
-                pitch: 38.00,
-                bearing: -9.6,
-                speed: .5 // make the flying slow
+                center: [-81.28787, 28.37169],
+                zoom: 6.16,
+                pitch: 11.50,
+                bearing: 0.00,
+                speed: .5
             },
             mapAnimation: 'flyTo',
-            //mapStyle:  'mapbox://styles/amarsarvepalli19/cl0lh1rip001w14mzxzrtmkat', 
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [{layer: 'nextgen-EMP', opacity: 0.75, color : false}],  
-            onChapterExit: [{layer: 'nextgen-EMP', opacity: 0 , color : false}] 
-        }, 
-        {
-            id: 'chapter3-s12',
-            alignment: 'center',
-            hidden: false,
-            title: 'Route Choice Model: HyDRA',
-            image: './images/chapter_3/Chap3d_Title.png',
-            description: 'Route choice and network loading now run in <b>HyDRA</b> (AgentFlow-DTA), a C++17 agent-based dynamic traffic assignment engine built for this model. Every agent routes on time-dependent generalized cost - its own value of time, per-segment toll and distance coefficients, axle-based truck tolls - with route chunks propagating congestion feedback within an iteration and progressive coarse-to-fine sampling driving a converged statewide equilibrium (640k links, 35M route keys, 77M agents).',
-            location: {
-                center: [-83.02417, 27.89955],
-                zoom: 8.15,
-                pitch: 38.00,
-                bearing: -9.6,
-                speed: .5 // make the flying slow
-            },
-            mapAnimation: 'flyTo',
-            //mapStyle:  'mapbox://styles/amarsarvepalli19/cl0lh1rip001w14mzxzrtmkat', 
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [{layer: 'nextgen-age', opacity: 0.75, color : false}],  
-            onChapterExit: [{layer: 'nextgen-age', opacity: 0 , color : false}] 
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: 'chapter3-s13',
@@ -910,7 +908,7 @@ var config = {
             hidden: false,
             title: 'I-4 Express Lanes Application',
             image: './images/chapter_4/forecast.png',
-            description: 'Express lanes forecast includes both tolled traffic and toll rate. Toll rates are dynamically charged based on congestion. The pricin curves were set based on v/c  (ELTOD 3 & 4) or density (ELToD 5).',
+            description: 'Express lanes forecast includes both tolled traffic and toll rate. Toll rates are dynamically charged based on congestion - density-based step pricing per gantry, native in HyDRA. Charts are model output for I-4 Express from the statewide run: hourly volume, speed and toll by direction, and average vehicles queued at the express-lane entrances (meso).',
             location: {
 
                 center: [-81.75036, 28.31709],
@@ -947,46 +945,6 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'chapter5-s1',
-            alignment: 'left',
-            hidden: false,
-            title: 'Network & Population Engines',
-            image: './images/chapter_5/network.png',
-            description: '<b>netPrep</b> - GeoMaster GeoPackage to consolidated Link/Node networks and GMNS in one pass: link consolidation with Many-to-One traceability, multiple count fields, and the DTA controls (meso/micro tiers, per-gantry toll policies, reversible lanes, truck restrictions) carried natively.<br><br><b>PathSkim</b> - C++ free-flow path skims written straight to OMX for the demand models.<br><br><b>PopSyn</b> - population synthesis (households + group quarters) with land-use prepared by <b>se_aggregate</b>, which rolls the 26k-zone regional land use up to model zones exactly.',
-            location: {
-                center: [-84.98998, 28.40739],
-                zoom: 6.88,
-                pitch: 46.50,
-                bearing: 0.00,
-                speed: .5
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'chapter5-s2',
-            alignment: 'right',
-            hidden: false,
-            title: 'Demand Engines',
-            image: './images/chapter_5/demand.png',
-            description: '<b>SDTModel</b> (sdt-run) - the resident and visitor short-distance tour models, refactored from Java to C++: statewide daily activity patterns, location choice on skim tiles, distributed VOT - in minutes.<br><br><b>LDTModel</b> (ldt-run) - long-distance resident / visitor / cross-border tours (joint destination-mode choice), refactored from Pascal to C++, with DMA-level calibration and market-specific external targets.<br><br><b>agentPlans</b> - assembles every market into one HyDRA-ready trip list: external-station scaling by market, departure-time clock, and the express-lane toll-choice inputs.',
-            location: {
-                center: [-81.28787, 28.37169],
-                zoom: 6.16,
-                pitch: 11.50,
-                bearing: 0.00,
-                speed: .5
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
             id: 'chapter5-s3',
             alignment: 'left',
             hidden: false,
@@ -1012,7 +970,7 @@ var config = {
             hidden: false,
             title: 'Analysis, Reporting & the QGIS Panel',
             image: './images/chapter_5/analysis.png',
-            description: '<b>agentAnalysis</b> - select link (OR / AND / per-link), turning movements, subarea extraction and household-level path trace over the billions of stored path links; a one-time link index turns 20-minute queries into seconds, under a hard RAM cap.<br><br><b>utilities</b> - the toolbox: <b>summarize</b> (60M+ link-performance rows to a loaded network GeoPackage in under a minute, in parallel), gpkgcsv, landuse_delta, ODME and friends.<br><br><b>tsm_panel</b> - the single QGIS panel that runs the whole chain: network prep, demand, HyDRA (with the loaded network auto-mapped on completion), scenario report card, interchange dashboards and a micro lane-level visualizer.',
+            description: '<b>agentAnalysis</b> - select link (OR / AND / per-link), turning movements, subarea extraction and household-level path trace over the billions of stored path links; a one-time link index turns 20-minute queries into seconds, under a hard RAM cap.<br><br><b>utilities</b> - the toolbox: <b>summarize</b> (60M+ link-performance rows to a loaded network GeoPackage in under a minute, in parallel), gpkgcsv and landuse_delta.<br><br><b>tsm_panel</b> - the single QGIS panel that runs the whole chain: network prep, demand, HyDRA (with the loaded network auto-mapped on completion), scenario report card, interchange dashboards and a micro lane-level visualizer.',
             location: {
                 center: [-81.38096, 28.53625],
                 zoom: 16.50,
