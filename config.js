@@ -366,7 +366,7 @@ var config = {
             hidden: false,
             title: 'Model Structure',
             image: './images/chapter_3/ModelStructure.png',
-            description: 'TSM-NextGen framework is designed to evlove organically as more and more details surrounding the travel behavior change over the time. The current framework involves in two classes of trips:  <br> 1. Estimated based on Survey Data (NHTS, Regional HTS, O-D Data, Transaction Data, SPS, Service Plaza Surveys, Visit Florida Data) and <br> 2. Transfered models from other places (Visitor models, FHWA long distance model, truck demand approximations).',
+            description: 'TSM-NextGen framework is designed to evlove organically as more and more details surrounding the travel behavior change over the time. The current framework involves in two classes of trips:  <br> 1. Estimated based on Survey Data (NHTS, Regional HTS, O-D Data, Transaction Data, SPS, Service Plaza Surveys, Visit Florida Data) and <br> 2. Asserted demand where surveys are thin (visitor tours, long-distance travel, truck demand approximations).',
             location: {
                 center: [-83.63244, 29.06899],
                 zoom: 6.80,
@@ -690,7 +690,7 @@ var config = {
             hidden: false,
             title: 'Running LDT Resident Model',
             image: './images/chapter_3/callLDT.png',
-            description: 'The long-distance resident and visitor tour-based model is adapted from FHWA long-distance passenger model where the salient feature is its joint probablity distribution of mode-chocie and destination-choice models. <br> The model is now a modern C++ engine (a full refactor of the original Pascal implementation, since retired) with control-file scenario settings, DMA-level destination calibration, external-station targets by market, and one-click launch from the TSM panel.',
+            description: 'The long-distance resident and visitor tour-based model estimates destination and mode jointly - a joint probability distribution of destination-choice and mode-choice. <br> The model is now a modern C++ engine (a full refactor of the original Pascal implementation, since retired) with control-file scenario settings, DMA-level destination calibration, external-station targets by market, and one-click launch from the TSM panel.',
             location: {
                 center: [-83.02417, 27.89955],
                 zoom: 8.15,
@@ -711,7 +711,7 @@ var config = {
             hidden: false,
             title: 'Running SDT Visitor Model',
             image: './images/chapter_3/callSDT_vis.png',
-            description: 'The short-distance visitor tour-based model is adapted from SANDAG / OHAU. It estimates tours from visitors staying at hotels and some resident households.  The sdt tours were validated against statewide O-D tour data.' ,
+            description: 'The short-distance visitor tour-based model estimates tours from visitors staying at hotels and some resident households.  The sdt tours were validated against statewide O-D tour data.' ,
             location: {
                 center: [-83.02417, 27.89955],
                 zoom: 8.15,
@@ -969,7 +969,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Demand Engines',
-            description: '<b>SDTModel</b> (sdt-run) - the resident and visitor short-distance tour models, refactored from Java to C++: statewide daily activity patterns, location choice on skim tiles, distributed VOT - in minutes.<br><br><b>LDTModel</b> (ldt-run) - long-distance resident / visitor / cross-border tours (FHWA-style joint destination-mode choice), refactored from Pascal to C++, with DMA-level calibration and market-specific external targets.<br><br><b>agentPlans</b> - assembles every market into one HyDRA-ready trip list: external-station scaling by market, departure-time clock, and the express-lane toll-choice inputs.',
+            description: '<b>SDTModel</b> (sdt-run) - the resident and visitor short-distance tour models, refactored from Java to C++: statewide daily activity patterns, location choice on skim tiles, distributed VOT - in minutes.<br><br><b>LDTModel</b> (ldt-run) - long-distance resident / visitor / cross-border tours (joint destination-mode choice), refactored from Pascal to C++, with DMA-level calibration and market-specific external targets.<br><br><b>agentPlans</b> - assembles every market into one HyDRA-ready trip list: external-station scaling by market, departure-time clock, and the express-lane toll-choice inputs.',
             location: {
                 center: [-81.28787, 28.37169],
                 zoom: 6.16,
