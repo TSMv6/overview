@@ -25,7 +25,7 @@ var config = {
     auto: false,
     title: 'Turnpike State Model - NextGen',
     subtitle: 'An agent-based model: disaggregate tours, distributed VOT, and multi-resolution dynamic traffic assignment (HyDRA)',
-    byline: 'Venkat "Amar" Sarvepalli',
+    byline: '',
     // footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     footer: '',
     chapters: [
