@@ -931,6 +931,7 @@ var config = {
             alignment: 'center',
             hidden: false,
             title: 'CHAPTER 5: The Refactor - One Agent-Based Platform',
+            image: './images/chapter_5/title.png',
             description: 'The entire software stack has been rebuilt as a family of modern C++ engines around a single idea: <b>the agent</b>. One identity (household, person, tour, trip) flows unchanged from population synthesis through demand, assignment and analysis. The legacy mix of Java, Pascal, R and Cube-era scripts is retired; every engine ships as a self-contained executable driven from one QGIS panel - users install nothing. All repositories live under the <b>TSMv6</b> GitHub organization.',
             location: {
                 center: [-83.63244, 29.06899],
@@ -950,6 +951,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Network & Population Engines',
+            image: './images/chapter_5/network.png',
             description: '<b>netPrep</b> - GeoMaster GeoPackage to consolidated Link/Node networks and GMNS in one pass: link consolidation with Many-to-One traceability, multiple count fields, and the DTA controls (meso/micro tiers, per-gantry toll policies, reversible lanes, truck restrictions) carried natively.<br><br><b>PathSkim</b> - C++ free-flow path skims written straight to OMX for the demand models.<br><br><b>PopSim</b> - population synthesis (households + group quarters) with land-use prepared by <b>se_aggregate</b>, which rolls the 26k-zone regional land use up to model zones exactly.',
             location: {
                 center: [-84.98998, 28.40739],
@@ -969,6 +971,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Demand Engines',
+            image: './images/chapter_5/demand.png',
             description: '<b>SDTModel</b> (sdt-run) - the resident and visitor short-distance tour models, refactored from Java to C++: statewide daily activity patterns, location choice on skim tiles, distributed VOT - in minutes.<br><br><b>LDTModel</b> (ldt-run) - long-distance resident / visitor / cross-border tours (joint destination-mode choice), refactored from Pascal to C++, with DMA-level calibration and market-specific external targets.<br><br><b>agentPlans</b> - assembles every market into one HyDRA-ready trip list: external-station scaling by market, departure-time clock, and the express-lane toll-choice inputs.',
             location: {
                 center: [-81.28787, 28.37169],
@@ -988,6 +991,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'HyDRA: Agent-Based Multi-Resolution Assignment',
+            image: './images/chapter_5/hydra.png',
             description: '<b>agentflow-dta</b> (afdta) is the heart of the platform - a C++17 dynamic traffic assignment where all 77M agents are individuals:<br>- <b>Macro</b>: flow-conserving node-model loader (nodeDNL) statewide;<br>- <b>Meso</b>: packet simulation with turn-level queues on the limited-access system;<br>- <b>Micro</b>: IDM/MOBIL lane simulation on express corridors with per-agent EL/GP choice;<br>- Route chunks + progressive coarse-to-fine sampling for affordable convergence;<br>- Four toll types in one run (fixed / time-of-day / density-dynamic per gantry / reversible), axle-based truck tolls, PCE loading;<br>- Outputs one self-contained <b>agentPaths.duckdb</b> - every agent, its 4-part identity and its full path.',
             location: {
                 center: [-80.21192, 25.87910],
@@ -1007,6 +1011,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Analysis, Reporting & the QGIS Panel',
+            image: './images/chapter_5/analysis.png',
             description: '<b>agentAnalysis</b> - select link (OR / AND / per-link), turning movements, subarea extraction and household-level path trace over the billions of stored path links; a one-time link index turns 20-minute queries into seconds, under a hard RAM cap.<br><br><b>utilities</b> - the toolbox: <b>summarize</b> (60M+ link-performance rows to a loaded network GeoPackage in under a minute, in parallel), gpkgcsv, landuse_delta, ODME and friends.<br><br><b>tsm_panel</b> - the single QGIS panel that runs the whole chain: network prep, demand, HyDRA (with the loaded network auto-mapped on completion), scenario report card, interchange dashboards and a micro lane-level visualizer.',
             location: {
                 center: [-81.38096, 28.53625],
