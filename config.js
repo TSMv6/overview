@@ -952,7 +952,7 @@ var config = {
             hidden: false,
             title: 'Network & Population Engines',
             image: './images/chapter_5/network.png',
-            description: '<b>netPrep</b> - GeoMaster GeoPackage to consolidated Link/Node networks and GMNS in one pass: link consolidation with Many-to-One traceability, multiple count fields, and the DTA controls (meso/micro tiers, per-gantry toll policies, reversible lanes, truck restrictions) carried natively.<br><br><b>PathSkim</b> - C++ free-flow path skims written straight to OMX for the demand models.<br><br><b>PopSim</b> - population synthesis (households + group quarters) with land-use prepared by <b>se_aggregate</b>, which rolls the 26k-zone regional land use up to model zones exactly.',
+            description: '<b>netPrep</b> - GeoMaster GeoPackage to consolidated Link/Node networks and GMNS in one pass: link consolidation with Many-to-One traceability, multiple count fields, and the DTA controls (meso/micro tiers, per-gantry toll policies, reversible lanes, truck restrictions) carried natively.<br><br><b>PathSkim</b> - C++ free-flow path skims written straight to OMX for the demand models.<br><br><b>PopSyn</b> - population synthesis (households + group quarters) with land-use prepared by <b>se_aggregate</b>, which rolls the 26k-zone regional land use up to model zones exactly.',
             location: {
                 center: [-84.98998, 28.40739],
                 zoom: 6.88,
